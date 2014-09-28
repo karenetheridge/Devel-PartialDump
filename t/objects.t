@@ -56,9 +56,9 @@ subtest 'dump' => sub {
 subtest 'string value' => sub {
     my $d = Devel::PartialDump->new( objects => 0, stringify => 0 );
 
-    like( $d->dump($hash), qr/^My::Object::Hash=HASH\(0x[a-z0-9]+\)$/ );
-    like( $d->dump($array), qr/^My::Object::Array=ARRAY\(0x[a-z0-9]+\)$/ );
-    like( $d->dump($scalar), qr/^My::Object::Scalar=SCALAR\(0x[a-z0-9]+\)$/ );
+    like( $d->dump($hash), qr/^My::Object::Hash=HASH\(0x[[:xdigit:]]+\)$/ );
+    like( $d->dump($array), qr/^My::Object::Array=ARRAY\(0x[[:xdigit:]]+\)$/ );
+    like( $d->dump($scalar), qr/^My::Object::Scalar=SCALAR\(0x[[:xdigit:]]+\)$/ );
 };
 
 subtest 'string overload' => sub {

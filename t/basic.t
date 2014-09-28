@@ -88,10 +88,10 @@ subtest 'max_depth' => sub {
     is( $d->dump($data), '{ foo: [ "bar" ], gorch: { 1: [ "bah" ] } }', "high" );
 
     $d->max_depth(2);
-    like( $d->dump($data), qr/^\{ foo: \[ "bar" \], gorch: \{ 1: ARRAY\(0x[a-z0-9]+\) \} \}/, "low" );
+    like( $d->dump($data), qr/^\{ foo: \[ "bar" \], gorch: \{ 1: ARRAY\(0x[[:xdigit:]]+\) \} \}/, "low" );
 
     $d->max_depth(0);
-    like( $d->dump($data), qr/^HASH\(0x[a-z0-9]+\)/, "zero" );
+    like( $d->dump($data), qr/^HASH\(0x[[:xdigit:]]+\)/, "zero" );
 };
 
 {

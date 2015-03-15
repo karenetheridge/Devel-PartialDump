@@ -3,7 +3,7 @@ use warnings;
 package Devel::PartialDump;
 # ABSTRACT: Partial dumping of data structures, optimized for argument printing.
 # KEYWORDS: development debugging dump dumper diagnostics deep data structures
-# vim: set ts=8 sw=4 tw=78 et :
+# vim: set ts=8 sts=4 sw=4 tw=78 et :
 
 use Carp ();
 use Scalar::Util qw(looks_like_number reftype blessed);

@@ -5,6 +5,8 @@ package Devel::PartialDump;
 # KEYWORDS: development debugging dump dumper diagnostics deep data structures
 # vim: set ts=8 sts=4 sw=4 tw=78 et :
 
+our $VERSION = '0.18';
+
 use Carp ();
 use Scalar::Util qw(looks_like_number reftype blessed);
 

@@ -10,7 +10,7 @@ our $VERSION = '0.18';
 use Carp ();
 use Scalar::Util qw(looks_like_number reftype blessed);
 
-use namespace::clean;
+use namespace::clean 0.19;
 
 use Class::Tiny {
     max_length => undef,
